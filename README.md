@@ -1,11 +1,12 @@
-# atlas-ani-json-creater
+# atlas-ani-json-creator
 
 #### 介绍
-这是一个根据所提供图集图片资源快速生成图集动画json文件的简单工具。
+
+这是一个根据所提供图集图片资源快速生成图集动画 json 文件的简单工具。
 
 #### 软件架构
-软件架构说明
 
+软件架构说明
 
 #### 安装教程
 
@@ -26,10 +27,9 @@
 3.  提交代码
 4.  新建 Pull Request
 
-
 #### 码云特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+1.  使用 Readme_XXX.md 来支持不同的语言，例如 Readme_en.md, Readme_zh.md
 2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
 3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
 4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目

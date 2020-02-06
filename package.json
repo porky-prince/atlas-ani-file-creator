@@ -1,0 +1,57 @@
+{
+    "name": "atlas-ani-json-creator",
+    "version": "1.0.0",
+    "description": "This is a simple tool for quickly generating atlas-ani-json file from image resources.",
+    "author": "Kay",
+    "license": "MIT",
+    "homepage": "https://gitee.com/porky-prince/atlas-ani-json-creator#readme",
+    "repository": "https://gitee.com/porky-prince/atlas-ani-json-creator",
+    "bugs": "https://gitee.com/porky-prince/atlas-ani-json-creator/issues",
+    "main": "src/main.js",
+    "bin": {
+        "atlas-ani-json-creator": "bin/atlas-ani-json-creator.js"
+    },
+    "files": [
+        "bin",
+        "src"
+    ],
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "scripts": {
+        "start": "",
+        "commitlint": "commitlint --from=master",
+        "lint:prettier": "prettier \"{**/*,*}.{js,json,md}\" -l",
+        "lint:js": "eslint --cache .",
+        "lint": "npm-run-all -l -p \"lint:**\"",
+        "pretest": "npm run lint && del-cli test/output",
+        "test": "jest",
+        "release": "standard-version"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^8.3.5",
+        "@commitlint/config-conventional": "^8.3.4",
+        "del": "^5.1.0",
+        "del-cli": "^3.0.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.9.0",
+        "husky": "^4.0.10",
+        "jest": "^24.9.0",
+        "lint-staged": "^9.5.0",
+        "npm-run-all": "^4.1.5",
+        "prettier": "1.19.1",
+        "standard-version": "^7.0.1"
+    },
+    "dependencies": {
+        "fs-extra": "^8.1.0",
+        "image-size": "^0.8.3",
+        "yargs": "^15.1.0"
+    },
+    "keywords": [
+        "atlas",
+        "ani",
+        "animation",
+        "json",
+        "sprite"
+    ]
+}
