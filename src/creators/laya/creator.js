@@ -1,3 +1,4 @@
+const { Types } = require('../../const');
 const AbstractCreator = require('../abstractCreator');
 
 const LAYA_ASSETS = 'laya/assets/';
@@ -5,7 +6,11 @@ const LAYA_ASSETS = 'laya/assets/';
 class Creator extends AbstractCreator {
     constructor() {
         super();
-        this.extName = 'ani';
+        this.extName = '.ani';
+    }
+
+    get type() {
+        return Types.laya;
     }
 
     size(width, height) {
@@ -27,7 +32,7 @@ class Creator extends AbstractCreator {
     }
 
     addFrame(src, dealFrame) {
-        let url = (src = src.replace('\\', '/'));
+        let url = (src = src.replace(/\\/g, '/'));
         let frame = this.getFrame();
         const index = url.indexOf(LAYA_ASSETS);
         if (index !== -1) {
@@ -35,7 +40,8 @@ class Creator extends AbstractCreator {
         }
         frame.value = url;
         frame.index = this.count();
-        this.getFrames().push(dealFrame ? dealFrame(frame, src) : frame);
+        const customFrame = dealFrame && dealFrame(frame, src);
+        this.getFrames().push(customFrame || frame);
     }
 }
 

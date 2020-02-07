@@ -9,10 +9,6 @@ module.exports = {
         return typeof any === 'boolean';
     },
 
-    isObj(any) {
-        return typeof any === 'object';
-    },
-
     isDir(url) {
         return fs.statSync(url).isDirectory();
     },
@@ -22,7 +18,7 @@ module.exports = {
     },
 
     merge(src, opt) {
-        if (opt && this.isObj(opt)) {
+        if (opt && typeof opt === 'object') {
             for (let attr in opt) {
                 if (opt.hasOwnProperty(attr) && attr in src) {
                     src[attr] = opt[attr];

@@ -39,7 +39,7 @@ class Option {
         if (isExist(src) && isDir(src)) {
             return src;
         } else {
-            throw new Error('The "src" must be a directory and exist.');
+            throw new Error(`The "${src}" must be a directory and exist.`);
         }
     }
 
@@ -65,12 +65,8 @@ class Option {
     get filename() {
         let filename = this._filename;
         if (filename === '') {
-            filename = this._src;
-            if (!path.isAbsolute(filename)) {
-                filename = path.join(process.cwd(), filename);
-            }
-            filename = path.parse(filename).name;
-            if (filename === '') {
+            filename = path.parse(this._src).name;
+            if (filename === '' || filename[0] === '.') {
                 filename =
                     'ani' +
                     Math.random()
