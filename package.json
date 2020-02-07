@@ -19,7 +19,6 @@
         "node": ">=8.0.0"
     },
     "scripts": {
-        "start": "",
         "commitlint": "commitlint --from=master",
         "lint:prettier": "prettier \"{**/*,*}.{js,json,md}\" -l",
         "lint:js": "eslint --cache .",
@@ -53,6 +52,7 @@
         "ani",
         "animation",
         "json",
-        "sprite"
+        "laya",
+        "egret"
     ]
 }
