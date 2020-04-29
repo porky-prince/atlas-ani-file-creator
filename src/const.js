@@ -5,13 +5,13 @@ const SRC = __dirname;
 const ROOT = path.join(SRC, '..');
 
 const Types = {
-    laya: 'laya',
-    // egret: 'egret',TODO
-    // cocos: 'cocos',TODO
+	laya: 'laya',
+	// Egret: 'egret',
+	// cocos: 'cocos',
 };
 
 module.exports = {
-    SRC,
-    ROOT,
-    Types,
+	SRC,
+	ROOT,
+	Types,
 };

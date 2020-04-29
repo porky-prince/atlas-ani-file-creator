@@ -1,7 +1,7 @@
-# atlas-ani-json-creator
+# atlas-ani-file-creator
 
 #### Description
 
-This is a simple tool for quickly generating atlas-ani-json file from image resources.
+This is a simple tool for quickly generating atlas-ani file from image resources.
 
 ### TODO
