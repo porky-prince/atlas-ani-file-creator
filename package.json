@@ -1,6 +1,6 @@
 {
 	"name": "atlas-ani-file-creator",
-	"version": "1.0.2-beta.1",
+	"version": "1.0.2-beta.2",
 	"description": "This is a simple tool for quickly generating atlas-ani file from image resources.",
 	"author": "Kay",
 	"license": "MIT",
