@@ -11,6 +11,7 @@ class Option {
 		this._overwrite = false;
 		this._dealFrame = null;
 		this._dealPath = null;
+		this._dealAni = null;
 		merge(this, opt);
 	}
 
@@ -107,6 +108,14 @@ class Option {
 
 	set dealPath(value) {
 		this._dealPath = value;
+	}
+
+	get dealAni() {
+		return this._dealAni;
+	}
+
+	set dealAni(value) {
+		this._dealAni = value;
 	}
 }
 

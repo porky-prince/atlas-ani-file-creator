@@ -74,11 +74,15 @@ class AbstractCreator {
 			file = path.join(option.dest, src, filename + this.extName);
 		}
 
-		if (!option.overwrite && (await fs.exists(file))) {
+		if (!option.overwrite && fs.existsSync(file)) {
 			console.warn(
 				`The "${file}" already exists,If you want to overwrite it,Please set [option.overwrite=true].`
 			);
 			return;
+		}
+
+		if (option.dealAni) {
+			this._tempJson = option.dealAni(this._tempJson, file);
 		}
 
 		await fs
