@@ -2,7 +2,7 @@
 	"name": "atlas-ani-file-creator",
 	"version": "1.0.2",
 	"description": "This is a simple tool for quickly generating atlas-ani file from image resources.",
-	"author": "Kay",
+	"author": "Porky Ke",
 	"license": "MIT",
 	"homepage": "https://github.com/porky-prince/atlas-ani-file-creator#readme",
 	"repository": "https://github.com/porky-prince/atlas-ani-file-creator",

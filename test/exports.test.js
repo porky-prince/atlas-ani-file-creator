@@ -31,7 +31,7 @@ describe('Test laya export', () => {
 	test('Test single', async () => {
 		const opt = buildOpt(type, false, false, filename);
 		await run(opt);
-		expect(await fs.exists(path.join(opt.dest, filename + extName))).toBe(true);
+		expect(fs.existsSync(path.join(opt.dest, filename + extName))).toBe(true);
 	});
 
 	test('Test multi', async () => {
@@ -40,14 +40,14 @@ describe('Test laya export', () => {
 		const files = await fs.readdir(opt.src);
 		for (let i = 0; i < files.length; i++) {
 			/* eslint no-await-in-loop: "off" */
-			expect(await fs.exists(path.join(opt.dest, files[i] + extName))).toBe(true);
+			expect(fs.existsSync(path.join(opt.dest, files[i] + extName))).toBe(true);
 		}
 	});
 
 	test('Test single in project', async () => {
 		const opt = buildOpt(type, false, true, filename);
 		await run(opt);
-		expect(await fs.exists(path.join(opt.dest, filename + extName))).toBe(true);
+		expect(fs.existsSync(path.join(opt.dest, filename + extName))).toBe(true);
 	});
 
 	test('Test multi in project', async () => {
@@ -56,7 +56,7 @@ describe('Test laya export', () => {
 		const files = await fs.readdir(opt.src);
 		for (let i = 0; i < files.length; i++) {
 			/* eslint no-await-in-loop: "off" */
-			expect(await fs.exists(path.join(opt.dest, files[i] + extName))).toBe(true);
+			expect(fs.existsSync(path.join(opt.dest, files[i] + extName))).toBe(true);
 		}
 	});
 });
